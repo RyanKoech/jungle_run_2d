@@ -6,11 +6,21 @@ public class GroundGenerator : MonoBehaviour
 {
     
     public Transform groundPoint;
+    public Transform minHeightPoint;
+    public Transform maxHeightPoint;
     public ObjectPooler[] groundPoolers;
+    public float minGap;
+    public float maxGap;
+
+    private float minY;
+    private float maxY;
     private float[] groundWidths;
 
     void Start()
     {
+        minY = minHeightPoint.position.y;
+        maxY = maxHeightPoint.position.y;
+
         groundWidths = new float[groundPoolers.Length];
         for (int i = 0; i<groundPoolers.Length; i++) {
             groundWidths[i] = groundPoolers[i].pooledObject.GetComponent<BoxCollider2D>().size.x;
@@ -22,11 +32,14 @@ public class GroundGenerator : MonoBehaviour
     {
         if (transform.position.x < groundPoint.position.x) {
             int random = Random.Range(0, groundPoolers.Length);
-            float distance = groundWidths[random]/2.5f;
+            float distance = groundWidths[random]/2.1f;
+
+            float gap = Random.Range(minGap, maxGap);
+            float height = Random.Range(minY, maxY);
 
             transform.position = new Vector3(
-                transform.position.x + distance,
-                transform.position.y,
+                transform.position.x + distance + gap,
+                height,
                 transform.position.z
             );
 
