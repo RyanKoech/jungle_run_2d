@@ -9,6 +9,7 @@ public class ScoreManager : MonoBehaviour
     public float pointsPerSecond;
     public Text scoreText;
     public Text hiScoreText;
+    public bool isScoreIncreasing;
 
     public float score;
     private float hiScore;
@@ -16,13 +17,15 @@ public class ScoreManager : MonoBehaviour
 
     void Start()
     {
+        isScoreIncreasing = true; 
         if (PlayerPrefs.HasKey("HiScore"))   
             hiScore = PlayerPrefs.GetFloat("HiScore");
     }
 
     void Update()
     {
-         score += pointsPerSecond * Time.deltaTime;
+        if (isScoreIncreasing)
+            score += pointsPerSecond * Time.deltaTime;
 
          if (score > hiScore) {
             hiScore = score;
