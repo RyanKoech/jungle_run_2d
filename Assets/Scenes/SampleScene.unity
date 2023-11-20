@@ -2490,6 +2490,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   jump: 18
+  mileStone: 100
+  speedMultiplier: 1.1
   ground:
     serializedVersion: 2
     m_Bits: 64
