@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -6.406189, y: -8.541412}
+  m_AnchoredPosition: {x: -6.406189, y: -8.541382}
   m_SizeDelta: {x: 52.86328, y: 68.48407}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &68998221
@@ -1691,8 +1691,8 @@ Transform:
   m_GameObject: {fileID: 1431871052}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0043, y: -0.0195, z: 10}
-  m_LocalScale: {x: 20.394758, y: 10.13973, z: 1}
+  m_LocalPosition: {x: 0.3143, y: -0.0195, z: 10}
+  m_LocalScale: {x: 27.402807, y: 10.13973, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 519420032}
@@ -3270,7 +3270,7 @@ MonoBehaviour:
   speed: 10
   jump: 18
   mileStone: 100
-  speedMultiplier: 1.1
+  speedMultiplier: 1.2
   ground:
     serializedVersion: 2
     m_Bits: 64
